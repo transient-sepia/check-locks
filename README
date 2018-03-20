@@ -1,11 +1,15 @@
 The script writes the output to the file assigned to the $logfile variable.
 Default is '/u01/log/nagios/check_locks.log'. You should create it beforehand.
 
-        check_locks - Check if there are locks in database.
+        check_locks.pl - check if there are locks in database.
 
-        check_locks.pl [-hnst] <SID> <USER> <PWD>
+        check_locks.pl [-hnst] -d <DATABASE> [-l <TIME_LIMIT>] -u <USER> -p <PWD>
 
-        -s - silent output (only number of locks, if any)
-        -n - no html formatting
-        -t - table locks
-        -h - print this message
+        -d - database name.
+        -h - print this message.
+        -l - optional time limit when to alert about possible locks (in seconds).
+        -n - no html formatting.
+        -p - user password.
+        -s - silent output (only number of locks, if any).
+        -t - table locks.
+        -u - database user.
